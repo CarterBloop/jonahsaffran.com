@@ -1,0 +1,51 @@
+.carousel {
+    overflow: hidden;
+    max-width: 200vw;
+}
+
+.inner {
+    white-space: nowrap;
+    transition: transform 0.3s;
+}
+
+.carousel-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #fff;
+    width:100%;
+}
+
+.indicators {
+    display: flex;
+    transform:translate(0px,-50px);
+    justify-content: center;
+    color:rgba(255, 255, 255, 0);
+    border-style: none;
+    font-family:'Courier New', Courier, monospace;
+    opacity: 0;
+}
+
+@media (pointer:coarse) {
+    .indicators {
+        display: none;
+    }
+}
+.indicators:hover {
+    opacity: 1;
+}
+.indicators > button {
+    font-size:20px;
+    font-family:monospace;
+    margin: 1%;
+    background-color: rgba(255, 255, 255, 0);
+    border-style: none;
+    color:rgb(255, 255, 255);
+    transition: transform .1s;
+}
+
+.indicators > button.active {
+    color: rgb(0, 183, 255);
+    border-style: none;
+}
